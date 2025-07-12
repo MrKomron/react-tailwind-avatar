@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+Zeker! Hieronder vind je een **professionele en complete README.md** voor je NPM-package `react-tailwind-avatar`, die je meteen kunt gebruiken of aanpassen.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📄 README.md voor `react-tailwind-avatar`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+````md
+# react-tailwind-avatar
 
-## Expanding the ESLint configuration
+Een herbruikbare en aanpasbare avatarcomponent voor React, gebouwd met Tailwind CSS. Ondersteunt initialen, afbeeldingen en dynamische kleuren.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![NPM Version](https://img.shields.io/npm/v/react-tailwind-avatar) ![License](https://img.shields.io/npm/l/react-tailwind-avatar) ![Downloads](https://img.shields.io/npm/dm/react-tailwind-avatar)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 📛 Ondersteunt initialen als fallback
+- 🖼️ Ondersteunt profielfoto's
+- 🎨 Willekeurige of aangepaste kleuren
+- 📐 Verschillende formaten
+- 🌙 Dark mode-vriendelijk (Tailwind)
+
+---
+
+## 🚀 Installatie
+
+```bash
+npm install react-tailwind-avatar
+````
+
+of met Yarn:
+
+```bash
+yarn add react-tailwind-avatar
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Gebruik
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import Avatar from 'react-tailwind-avatar';
+import 'react-tailwind-avatar/dist/index.css';
+
+export default function App() {
+  return (
+    <div className="p-4">
+      <Avatar name="Amina Yusuf" size="lg" image="https://i.pravatar.cc/150?img=3" />
+    </div>
+  );
+}
+```
+
+---
+
+## ⚙️ Props
+
+| Prop        | Type    | Beschrijving                                  | Voorbeeld            |
+| ----------- | ------- | --------------------------------------------- | -------------------- |
+| `name`      | string  | Naam waarvan initialen worden gegenereerd     | `"Ali Ben Omar"`     |
+| `image`     | string  | URL naar profielfoto (optioneel)              | `"https://..."`      |
+| `size`      | string  | Grootte (`sm`, `md`, `lg`, `xl`)              | `"md"`               |
+| `rounded`   | boolean | Maakt de avatar volledig rond (default: true) | `false`              |
+| `className` | string  | Extra Tailwind klassen                        | `"ring ring-offset"` |
+
+---
+
+## 🧪 Voorbeelden
+
+```tsx
+<Avatar name="Fatima Al-Zahra" />
+<Avatar name="Yusuf Idris" size="xl" />
+<Avatar name="Layla Noor" image="https://i.pravatar.cc/150?img=5" rounded={false} />
+```
+
+---
+
+## 📄 License
+
+MIT © [jouwgebruikersnaam](https://github.com/jouwgebruikersnaam)
+
+---
+
+## 📬 Contact
+
+Voor vragen of bijdragen, open een issue of stuur een pull request via GitHub.
+
+```
+
+---
+
+Wil je ook automatisch badges, npm keywords of een CONTRIBUTING.md erbij?
 ```
