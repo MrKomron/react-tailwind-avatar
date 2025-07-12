@@ -46,7 +46,7 @@ import 'react-tailwind-avatar/dist/index.css';
 export default function App() {
   return (
     <div className="p-4">
-      <Avatar name="Amina Yusuf" size="lg" image="https://i.pravatar.cc/150?img=3" />
+      <Avatar name="Yusuf Idris" size="lg" image="https://i.pravatar.cc/150?img=3" />
     </div>
   );
 }
@@ -90,5 +90,5 @@ Voor vragen of bijdragen, open een issue of stuur een pull request via GitHub.
 
 ---
 
-Wil je ook automatisch badges, npm keywords of een CONTRIBUTING.md erbij?
+
 ```
